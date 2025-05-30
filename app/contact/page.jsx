@@ -10,6 +10,7 @@ export default function ContactPage() {
     e.preventDefault()
     // TODO: Connect to EmailJS or backend
     // Update to system intergration
+    // Update to all files
     setSubmitted(true)
   }
 
