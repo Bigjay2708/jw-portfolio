@@ -9,6 +9,7 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault()
     // TODO: Connect to EmailJS or backend
+    // Update to system intergration
     setSubmitted(true)
   }
 
