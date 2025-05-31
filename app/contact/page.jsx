@@ -11,6 +11,8 @@ export default function ContactPage() {
     // TODO: Connect to EmailJS or backend
     // Update to system intergration
     // Update to all files
+    // CSS class update
+    
     setSubmitted(true)
   }
 
