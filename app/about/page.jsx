@@ -11,7 +11,7 @@ export default function AboutPage() {
 
       <div className="flex flex-col md:flex-row items-center gap-8 bg-[#1a1a1a] p-6 rounded-lg shadow-lg">
         <Image
-          src="/bio-pic.jpg" // Make sure to place this in /public
+          src="/bio-pic.jpg" 
           alt="Bio Pic"
           width={250}
           height={250}
