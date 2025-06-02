@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import QuoteCarousel from '@/components/QuoteCarousel'
 
 export default function HomePage() {
   return (
@@ -62,28 +63,9 @@ export default function HomePage() {
       </div>
 
       {/* Quotes Section */}
-      <div className="max-w-4xl mx-auto mb-12 text-center">
-        <h2 className="text-2xl font-bold text-darkgreen mb-4">Inspirational Quotes</h2>
-        <p className="text-sm text-gray-400 mb-6">
-          Explore a collection of quotes that inspire and motivate my journey in web development.
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {[
-            'Strive not to be a success, but rather to be of value. – Albert Einstein',
-            'The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt',
-            'The only way to do great work is to love what you do. – Steve Jobs',
-            'Go instead where there is no path and leave a trail. – Ralph Waldo Emerson',
-            'You miss 100% of the shots you don’t take. – Wayne Gretzky',
-            'In the middle of every difficulty lies opportunity. – Albert Einstein',
-            'It always seems impossible until it’s done. – Nelson Mandela',
-            'Creativity is intelligence having fun. – Albert Einstein'
-          ].map((quote, idx) => (
-            <div key={idx} className="p-4 bg-[#1a1a1a] rounded border border-gray-800 hover:border-darkgreen">
-              <p className="text-sm text-gray-300 italic">"{quote}"</p>
-            </div>
-          ))}
-        </div>
-      </div>
+    
+    
+     <QuoteCarousel />
 
       
     </section>
