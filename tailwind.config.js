@@ -6,10 +6,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-  pulse: 'pulse 4s ease-in-out infinite',
-},
-
       colors: {
         darkgreen: '#006400',
       },

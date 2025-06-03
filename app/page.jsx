@@ -5,8 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import QuoteCarousel from '@/components/QuoteCarousel'
 import DataGrid from '@/components/DataGrid'
-import BackgroundPanel from '@/components/BackgroundPanel'
-
 
 
 export default function HomePage() {

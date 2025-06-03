@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import BackgroundPanel from '@/components/BackgroundPanel'
 
 
 export default function AboutPage() {

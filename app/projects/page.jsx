@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import BackgroundPanel from '@/components/BackgroundPanel'
 
 
 // Featured project data
@@ -49,6 +48,15 @@ export default function ProjectsPage() {
       <h2 className="text-3xl sm:text-4xl font-bold mb-10 text-center text-white">
         Projects
       </h2>
+
+
+<div className="fixed top-20 right-6 z-20">
+  <div className="bg-[#111] text-darkgreen border border-darkgreen px-4 py-2 rounded-md shadow-lg text-sm font-mono animate-pulse backdrop-blur-sm">
+    <span className="block">📚 Currently Learning</span>
+    <span className="font-bold text-green-400">Python 🐍</span>
+  </div>
+</div>
+
 
       {/* ✅ Featured Project Spotlight */}
       <motion.div
