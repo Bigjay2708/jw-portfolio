@@ -1,8 +1,19 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
+import { motion, AnimatePresence } from 'framer-motion'
+
+// Featured project data
+const featured = {
+  title: 'GitHub Portfolio Website',
+  description:
+    'A responsive portfolio site showcasing full stack development projects, tech stack, and design capabilities. Built with HTML, CSS, and JavaScript, hosted on GitHub Pages.',
+  tech: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
+  image: '/github-pages.png',
+  repo: 'https://github.com/Bigjay2708/Bigjay2708.github.io',
+  live: 'https://bigjay2708.github.io',
+}
 
 const projects = [
   {
@@ -29,7 +40,7 @@ const projects = [
 ]
 
 export default function ProjectsPage() {
-  const [expanded, setExpanded] = useState(false)
+  const [expandedId, setExpandedId] = useState(null)
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-12 text-gray-200">
@@ -37,44 +48,51 @@ export default function ProjectsPage() {
         Projects
       </h2>
 
-      {/* Featured Project */}
+      {/* ✅ Featured Project Spotlight */}
       <motion.div
-        layout
-        className="bg-[#1a1a1a] p-6 rounded-lg mb-10 border border-darkgreen shadow-md cursor-pointer"
-        onClick={() => setExpanded(!expanded)}
+        whileHover={{ scale: 1.01 }}
+        className="bg-[#1a1a1a] border border-darkgreen rounded-lg overflow-hidden shadow-lg mb-12"
       >
         <Image
-          src="/github-pages.png"
-          alt="Featured Project"
+          src={featured.image}
+          alt={featured.title}
           width={1200}
-          height={500}
-          className="rounded mb-4 w-full object-cover"
+          height={600}
+          className="w-full h-64 sm:h-80 object-cover"
         />
-        <h3 className="text-2xl font-semibold text-darkgreen mb-2">
-          Featured Project
-        </h3>
-        <AnimatePresence>
-          {expanded && (
-            <motion.p
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="text-gray-300 mb-4 text-sm"
+        <div className="p-6">
+          <h3 className="text-2xl font-bold text-darkgreen mb-2">{featured.title}</h3>
+          <p className="text-sm text-gray-300 mb-4">{featured.description}</p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {featured.tech.map((tech, i) => (
+              <span
+                key={i}
+                className="text-xs bg-darkgreen bg-opacity-20 text-darkgreen px-2 py-1 rounded"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="flex gap-4">
+            <a
+              href={featured.repo}
+              target="_blank"
+              className="text-sm px-4 py-2 border border-darkgreen text-darkgreen rounded hover:bg-darkgreen hover:text-white transition"
             >
-              This is an in-depth overview of my GitHub Pages Portfolio, which highlights my comprehensive skills in full-stack development. The portfolio demonstrates my proficiency with various cutting-edge technologies, including HTML, CSS, JavaScript, and more. Explore this collection to see the blend of design and technology, and witness my enthusiasm for learning and improving in web development.
-            </motion.p>
-          )}
-        </AnimatePresence>
-        <a
-          href="https://github.com/Bigjay2708/Bigjay2708.github.io"
-          target="_blank"
-          className="inline-block mt-2 px-4 py-2 bg-darkgreen text-white text-sm rounded hover:bg-opacity-80 transition"
-        >
-          View My Work
-        </a>
+              View Code
+            </a>
+            <a
+              href={featured.live}
+              target="_blank"
+              className="text-sm px-4 py-2 border border-darkgreen text-darkgreen rounded hover:bg-darkgreen hover:text-white transition"
+            >
+              Live Demo
+            </a>
+          </div>
+        </div>
       </motion.div>
 
-      {/* Grid of Other Projects */}
+      {/* 🔽 Other Projects Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {projects.map((project) => (
           <div
