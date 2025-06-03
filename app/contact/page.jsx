@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import BackgroundPanel from '@/components/BackgroundPanel'
+
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
@@ -9,10 +11,7 @@ export default function ContactPage() {
   const handleSubmit = (e) => {
     e.preventDefault()
     // TODO: Connect to EmailJS or backend
-    // Update to system intergration
-    // Update to all files
-    // CSS class update
-    
+  
     setSubmitted(true)
   }
 

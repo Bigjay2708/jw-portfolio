@@ -5,11 +5,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import QuoteCarousel from '@/components/QuoteCarousel'
 import DataGrid from '@/components/DataGrid'
+import BackgroundPanel from '@/components/BackgroundPanel'
+
 
 
 export default function HomePage() {
   return (
     <section className="text-gray-200 px-4">
+
+
+
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center min-h-[85vh] text-center">
         <motion.h1

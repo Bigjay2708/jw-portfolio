@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
+import BackgroundPanel from '@/components/BackgroundPanel'
+
 
 // Featured project data
 const featured = {
