@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import QuoteCarousel from '@/components/QuoteCarousel'
 import DataGrid from '@/components/DataGrid'
-
+import StackCube from '@/components/StackCube'
 
 export default function HomePage() {
   return (
@@ -47,17 +47,11 @@ export default function HomePage() {
         </motion.div>
       </div>
 
+<StackCube />
 
-        
-       
-
-        
           <DataGrid />
 
-        
-
-
-
+  
       {/* About + Skills Section */}
       <div className="grid md:grid-cols-2 gap-10 my-20 max-w-5xl mx-auto">
         <div>
