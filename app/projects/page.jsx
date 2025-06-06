@@ -49,10 +49,11 @@ export default function ProjectsPage() {
         Projects
       </h2>
 
-
+{/* Learning Highlight */}
 <div className="fixed top-20 right-6 z-20">
   <div className="bg-[#111] text-darkgreen border border-darkgreen px-4 py-2 rounded-md shadow-lg text-sm font-mono animate-pulse backdrop-blur-sm">
-    <span className="block">📚 Currently Learning</span>
+    <span className="block">📚 Actively learning </span>
+    <span className="block"> this new technology </span>
     <span className="font-bold text-green-400">Python 🐍</span>
   </div>
 </div>
