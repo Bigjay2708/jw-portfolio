@@ -3,32 +3,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Sample project data
 const projects = [
-  {
+ {
     id: 1,
     title: 'Portfolio Website',
     description: 'A personal portfolio built with Next.js and Tailwind CSS.',
-    image: '/images/portfolio.png',
+    image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
     tags: ['React', 'Next.js', 'Tailwind'],
   },
   {
     id: 2,
     title: 'E-commerce Store',
     description: 'Full-stack e-commerce application using MERN stack.',
-    image: '/images/ecommerce.png',
+    image: '/e-commerce.webp',
     tags: ['MongoDB', 'Express', 'React', 'Node.js'],
   },
   {
     id: 3,
     title: 'Blog Platform',
     description: 'A headless CMS blog using Strapi and Gatsby.',
-    image: '/images/blog.png',
+    image: '/blog-project.webp',
     tags: ['Gatsby', 'GraphQL', 'Strapi'],
   },
   {
     id: 4,
     title: 'Chat App',
     description: 'Real-time chat application using Socket.io.',
-    image: '/images/chat.png',
+    image: '/chat-app.jpg',
     tags: ['Socket.io', 'Express', 'React'],
   },
 ];

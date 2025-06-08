@@ -5,6 +5,8 @@ import Link from 'next/link'
 import QuoteCarousel from '@/components/QuoteCarousel'
 import DataGrid from '@/components/DataGrid'
 import StackCube from '@/components/StackCube'
+import TypewriterEffect from '@/components/TypewriterEffect'
+
 
 
 
@@ -26,6 +28,7 @@ export default function HomePage() {
           >
             Welcome to My Portfolio
           </motion.h1>
+          <TypewriterEffect />
 
           <motion.p
             className="text-lg sm:text-xl text-gray-400 max-w-2xl mb-6"
@@ -49,8 +52,8 @@ export default function HomePage() {
             </Link>
           </motion.div>
         </div>
-
         <StackCube />
+
         <DataGrid />
 
         {/* About + Skills Section */}

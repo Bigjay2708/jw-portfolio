@@ -119,5 +119,3 @@ export default function CircuitBoardBackground() {
     />
   );
 }
-
-// Changes made
