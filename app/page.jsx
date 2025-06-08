@@ -28,6 +28,7 @@ export default function HomePage() {
           >
             Welcome to My Portfolio
           </motion.h1>
+
           <TypewriterEffect />
 
           <motion.p
@@ -75,8 +76,6 @@ export default function HomePage() {
             </ul>
           </div>
         </div>
-
-        <QuoteCarousel />
       </section>
   )
 }
