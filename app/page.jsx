@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import QuoteCarousel from '@/components/QuoteCarousel'
 import DataGrid from '@/components/DataGrid'
 import StackCube from '@/components/StackCube'
 import TypewriterEffect from '@/components/TypewriterEffect'
