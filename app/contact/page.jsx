@@ -3,6 +3,8 @@
 import { useState, useRef } from 'react'
 import Image from 'next/image'
 import emailjs from '@emailjs/browser'
+import Link from 'next/link'
+import { FaDownload } from 'react-icons/fa'
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
@@ -108,6 +110,27 @@ export default function ContactPage() {
                 />
               </a>
             ))}
+
+            {/* Resume Download Button */}
+            <Link
+              href="/resume.pdf"
+              className="bg-[#013220] p-3 rounded-lg hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center gap-2"
+              download
+              style={{
+                display: 'inline-flex',
+                transform: 'scale(1)',
+                transition: 'transform 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.1) rotate(12deg)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1) rotate(0deg)';
+              }}
+            >
+              <FaDownload size={20} className="text-white" />
+              <span className="text-white text-sm">Download Resume</span>
+            </Link>
           </div>
         </div>
 
