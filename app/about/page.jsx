@@ -25,7 +25,7 @@ export default function AboutPage() {
             Hello! I'm Jason Wells, and my interest in coding has been a part of me for as long as I can remember. Ever since I first encountered technology, I've been captivated by the endless possibilities that programming offers.
           </p>
           <p>
-            I am currently a student in the MIT xPro Full Stack Development with MERN program, and I'm also expanding my knowledge through Udemy.com. I'm fascinated by both front-end and back-end technologies, building a strong foundation to succeed in the tech industry.
+            I am a graduate of the MIT xPro Full Stack Development with MERN program, where I mastered both front-end and back-end technologies. I'm fascinated by both front-end and back-end technologies, building a strong foundation to succeed in the tech industry.
           </p>
           <p>
             Throughout my studies, I've refined my skills in HTML, CSS, JavaScript, and Node.js. I'm excited to dive into advanced coursework in React, MongoDB, Express, and other cutting-edge technologies.

@@ -36,7 +36,7 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           >
-            Innovative Full Stack Developer passionate about crafting cutting-edge web solutions. Currently enrolled in the MIT xPro Full Stack Development program.
+            Innovative Full Stack Developer passionate about crafting cutting-edge web solutions. Graduate of the MIT xPro Full Stack Development program.
           </motion.p>
 
           <motion.div
