@@ -5,76 +5,128 @@ import Link from 'next/link'
 import DataGrid from '@/components/DataGrid'
 import StackCube from '@/components/StackCube'
 import TypewriterEffect from '@/components/TypewriterEffect'
-
-
-
-
-
+import ProjectCarousel from '@/components/ProjectCarousel'
 
 export default function HomePage() {
   return (
-
-        <section className="text-gray-200 px-4">
-
-       
+    <main>
+      <section className="text-gray-200 px-4">
         {/* Hero Section */}
-        <div className="flex flex-col items-center justify-center min-h-[85vh] text-center">
-          <motion.h1
-            className="text-5xl sm:text-6xl font-bold mb-4 text-white"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Welcome to My Portfolio
-          </motion.h1>
-
-          <TypewriterEffect />
-
-          <motion.p
-            className="text-lg sm:text-xl text-gray-400 max-w-2xl mb-6"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            Innovative Full Stack Developer passionate about crafting cutting-edge web solutions. Graduate of the MIT xPro Full Stack Development program.
-          </motion.p>
-
+        <div className="min-h-screen flex flex-col items-center justify-center relative">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.5 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center z-10"
           >
-            <Link
-              href="/projects"
-              className="inline-block px-6 py-3 border border-darkgreen text-darkgreen hover:bg-darkgreen hover:text-white rounded transition duration-300"
-            >
-              See My Work
-            </Link>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+              Hi, I'm <span className="text-darkgreen">Jason Wells</span>
+            </h1>
+            <div className="h-20 mb-6">
+              <TypewriterEffect />
+            </div>
+            <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8">
+              Transforming complex challenges into elegant, scalable solutions through innovative development and strategic thinking
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/projects"
+                className="px-6 py-3 bg-darkgreen text-white rounded-lg hover:bg-darkgreen/90 transition-all duration-300 transform hover:scale-105"
+              >
+                View Projects
+              </Link>
+              <Link
+                href="/contact"
+                className="px-6 py-3 border-2 border-darkgreen text-darkgreen rounded-lg hover:bg-darkgreen hover:text-white transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Me
+              </Link>
+            </div>
           </motion.div>
         </div>
-        <StackCube />
 
-        <DataGrid />
+        {/* Projects Section */}
+        <div className="py-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-7xl mx-auto"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+              Projects
+            </h2>
+            <ProjectCarousel />
+            <div className="mt-20">
+              <DataGrid />
+            </div>
+          </motion.div>
+        </div>
 
-        {/* About + Skills Section */}
-        <div className="grid md:grid-cols-2 gap-10 my-20 max-w-5xl mx-auto">
-          <div>
-            <h2 className="text-2xl font-bold mb-4 text-darkgreen">About Me</h2>
-            <p className="text-sm text-gray-400">
-              I am a Full Stack Developer with a relentless drive to create high-quality web solutions. Currently enrolled in the MIT xPro Full Stack Development program, I am committed to mastering both front-end and back-end technologies. Visit my <Link href="/about" className="text-darkgreen underline">About Page</Link> to learn more.
+        {/* Tech Stack Section with StackCube */}
+        <div className="py-20 bg-gray-900/30">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Tech Stack
+                </h2>
+                <p className="text-gray-300 mb-8">
+                  Leveraging cutting-edge technologies to build robust and scalable applications
+                </p>
+                <Link
+                  href="/about"
+                  className="inline-block px-6 py-3 border-2 border-darkgreen text-darkgreen rounded-lg hover:bg-darkgreen hover:text-white transition-all duration-300"
+                >
+                  Learn More About My Skills
+                </Link>
+              </div>
+              <div className="flex justify-center">
+                <StackCube />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="py-20">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Let's Build Something Amazing Together
+            </h2>
+            <p className="text-gray-300 mb-8">
+              Whether you have a project in mind or want to discuss potential opportunities, I'm always excited to connect with fellow developers and innovators.
             </p>
-          </div>
-          <div>
-            <h2 className="text-2xl font-bold mb-4 text-darkgreen">My Skills</h2>
-            <ul className="list-disc list-inside text-sm text-gray-400">
-              <li>HTML, CSS, JavaScript</li>
-              <li>Node.js, Express</li>
-              <li>React, MongoDB</li>
-              <li>Git, GitHub</li>
-              <li>Responsive Web Design</li>
-            </ul>
-          </div>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-darkgreen text-white rounded-lg hover:bg-darkgreen/90 transition-all duration-300 transform hover:scale-105"
+              >
+                Start a Conversation
+              </Link>
+              <Link
+                href="/projects"
+                className="px-8 py-4 border-2 border-darkgreen text-darkgreen rounded-lg hover:bg-darkgreen hover:text-white transition-all duration-300 transform hover:scale-105"
+              >
+                Explore My Work
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
+    </main>
   )
 }

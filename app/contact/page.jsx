@@ -38,7 +38,7 @@ export default function ContactPage() {
   }
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 text-gray-200">
+    <section className="max-w-6xl mx-auto px-4 py-12 text-gray-200 min-h-[80vh]">
       <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center text-white">Contact Me</h2>
 
       {/* Contact + Info Section */}
