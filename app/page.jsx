@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import DataGrid from '@/components/DataGrid'
 import StackCube from '@/components/StackCube'
 import TypewriterEffect from '@/components/TypewriterEffect'
 import ProjectCarousel from '@/components/ProjectCarousel'
@@ -15,6 +14,24 @@ export default function HomePage() {
       <section className="text-gray-200 px-4">
         {/* Hero Section */}
         <div className="min-h-screen flex flex-col items-center justify-center relative">
+          {/* TypewriterEffect - Positioned above grid */}
+          <div className="w-full text-center mb-12 z-20">
+            <TypewriterEffect 
+              phrases={[
+                'Jason Wells.',
+                'Full Stack Dev.',
+                'MERN Specialist.',
+                'UI/UX Designer.',
+                'Problem Solver.',
+                'Tech Enthusiast.'
+              ]}
+              typingSpeed={70}
+              deletingSpeed={40}
+              delayBetweenPhrases={1800}
+              className="text-6xl sm:text-7xl font-bold"
+            />
+          </div>
+          
           <div className="grid md:grid-cols-2 gap-8 items-center z-10 max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -22,10 +39,6 @@ export default function HomePage() {
               transition={{ duration: 0.8 }}
               className="text-left"
             >
-              
-              <div className="h-20 mb-6">
-                <TypewriterEffect />
-              </div>
               <p className="text-gray-300 text-lg md:text-xl max-w-2xl mb-8">
                 Detail-driven web developer with a strong foundation in the MERN stack, passionate about user-focused design, 
                 modern frontend development, and collaborative problem solving.
@@ -96,9 +109,9 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="hidden md:flex justify-center relative"
             >
-              <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden border-4 border-darkgreen/30 shadow-2xl">
+              <div className="relative w-full max-w-sm aspect-square rounded-full overflow-hidden border-4 border-darkgreen/30 shadow-2xl">
                 <Image
-                  src="/PortfolioPhoto.jpg"
+                  src="/mypic2.jpg"
                   alt="Jason Wells"
                   fill
                   className="object-cover"
@@ -149,6 +162,153 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Tech Stack Section with StackCube */}
+        <div className="py-20 bg-gray-900/30 border-t border-gray-800">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-6xl mx-auto"
+          >
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                My Tech Stack
+              </h2>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                I leverage cutting-edge technologies to build robust, scalable, and responsive applications that deliver exceptional user experiences.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="flex justify-center order-2 md:order-1">
+                <StackCube />
+              </div>
+              <div className="order-1 md:order-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-darkgreen transition-all duration-300 hover:shadow-md">
+                    <h3 className="text-white font-semibold mb-3 flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-darkgreen" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                      </svg>
+                      Frontend
+                    </h3>
+                    <div className="text-gray-300 space-y-2">
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>React</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Next.js</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Tailwind CSS</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Framer Motion</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-darkgreen transition-all duration-300 hover:shadow-md">
+                    <h3 className="text-white font-semibold mb-3 flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-darkgreen" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 7H7v6h6V7z" />
+                        <path fillRule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clipRule="evenodd" />
+                      </svg>
+                      Backend
+                    </h3>
+                    <div className="text-gray-300 space-y-2">
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Node.js</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Express</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>MongoDB</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>RESTful APIs</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-darkgreen transition-all duration-300 hover:shadow-md">
+                    <h3 className="text-white font-semibold mb-3 flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-darkgreen" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                      </svg>
+                      Tools
+                    </h3>
+                    <div className="text-gray-300 space-y-2">
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Git & GitHub</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>VS Code</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Vercel</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Postman</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-darkgreen transition-all duration-300 hover:shadow-md">
+                    <h3 className="text-white font-semibold mb-3 flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-darkgreen" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                      </svg>
+                      Other Skills
+                    </h3>
+                    <div className="text-gray-300 space-y-2">
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Responsive Design</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>API Integration</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>Performance Optimization</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-darkgreen rounded-full mr-2"></div>
+                        <span>UI/UX Principles</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center md:justify-end">
+                  <Link
+                    href="/about"
+                    className="inline-block px-6 py-3 border-2 border-darkgreen text-darkgreen rounded-lg hover:bg-darkgreen hover:text-white transition-all duration-300"
+                  >
+                    Learn More About My Skills
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
         {/* Projects Section */}
         <div className="py-20 border-t border-gray-800">
           <motion.div
@@ -167,56 +327,6 @@ export default function HomePage() {
               </p>
             </div>
             <ProjectCarousel />
-            <div className="mt-20">
-              <DataGrid />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Tech Stack Section with StackCube */}
-        <div className="py-20 bg-gray-900/30 border-t border-gray-800">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-6xl mx-auto"
-          >
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  My Tech Stack
-                </h2>
-                <p className="text-gray-300 mb-6">
-                  I leverage cutting-edge technologies to build robust, scalable, and responsive applications that deliver exceptional user experiences.
-                </p>
-                
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-darkgreen rounded-full"></div>
-                    <span className="text-gray-200 font-medium">Frontend: React, Next.js, Tailwind CSS, Framer Motion</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-darkgreen rounded-full"></div>
-                    <span className="text-gray-200 font-medium">Backend: Node.js, Express, MongoDB, RESTful APIs</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-darkgreen rounded-full"></div>
-                    <span className="text-gray-200 font-medium">Tools: Git, GitHub, VS Code, Figma</span>
-                  </div>
-                </div>
-                
-                <Link
-                  href="/about"
-                  className="inline-block px-6 py-3 border-2 border-darkgreen text-darkgreen rounded-lg hover:bg-darkgreen hover:text-white transition-all duration-300"
-                >
-                  Learn More About My Skills
-                </Link>
-              </div>
-              <div className="flex justify-center">
-                <StackCube />
-              </div>
-            </div>
           </motion.div>
         </div>
 
@@ -343,7 +453,7 @@ export default function HomePage() {
                   <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">VS Code</span>
                   <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Responsive Design</span>
                   <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Agile/Scrum</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Figma</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Vercel</span>
                 </div>
               </motion.div>
             </div>

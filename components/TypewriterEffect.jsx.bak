@@ -30,7 +30,6 @@ export default function TypewriterEffect({
     
     return () => clearInterval(highlightInterval)
   }, [delayBetweenPhrases])
-
   const [text] = useTypewriter({
     words: phrases,
     loop: true,
@@ -39,23 +38,27 @@ export default function TypewriterEffect({
     deleteSpeed: deletingSpeed,
   })
 
-  return (    <motion.div
+  return (
+    <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : -20 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="overflow-hidden w-full"
+      className="overflow-hidden w-full px-4 py-2 md:bg-gray-900/40 md:backdrop-blur-sm md:rounded-xl"
     >
       <h1 className={className}>
         <motion.span 
           animate={{ scale: textHighlight ? 1.03 : 1 }}
           transition={{ duration: 0.2 }}
           className="inline-block animate-gradient-x bg-gradient-to-r from-teal-400 via-darkgreen to-emerald-400 bg-clip-text text-transparent font-extrabold whitespace-nowrap"
-          style={{ textShadow: '0 0 1px rgba(255,255,255,0.1)' }}
+          style={{ textShadow: '0 0 2px rgba(0,0,0,0.7), 0 0 4px rgba(0,0,0,0.5)' }}
         >
+          {text}
+        </motion.span>        >
           {text}
         </motion.span>
         <Cursor cursorColor={cursorColor} />
       </h1>
     </motion.div>
+  )
   )
 }

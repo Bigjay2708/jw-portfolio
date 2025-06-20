@@ -6,11 +6,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const projects = [
-  {
-    id: 1,
+  {    id: 1,
     title: 'Portfolio Website',
     description: 'A modern, responsive portfolio website leveraging Next.js 15 that combines interactive elements, smooth animations, and professional content presentation.',
-    image: '/github-pages.png',
+    image: '/PortfolioProject.png',
     tags: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion'],
     link: 'https://github.com/Bigjay2708/jw-portfolio'
   },

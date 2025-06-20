@@ -1,29 +1,61 @@
 .scene {
-  width: 140px;
-  height: 140px;
-  perspective: 800px;
+  width: 160px;
+  height: 160px;
+  perspective: 1000px;
+  margin: 0 auto;
 }
+
 .cube {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 0.2s ease-out;
 }
+
+.cube:hover {
+  animation-play-state: paused;
+}
+
 .face {
   position: absolute;
-  width: 140px;
-  height: 140px;
-  background-color: #000;
+  width: 160px;
+  height: 160px;
+  background-color: rgba(0, 0, 0, 0.8);
   border: 2px solid #013220; 
   background-size: cover;
   background-position: center;
+  box-shadow: 0 0 15px rgba(0, 100, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cube:hover .face {
+  box-shadow: 0 0 20px rgba(0, 100, 0, 0.5);
 }
 
 /* Image faces */
-.face-front  { transform: rotateY(0deg) translateZ(70px); background-image: url('/stack-cube-img/react.png'); }
-.face-back   { transform: rotateY(180deg) translateZ(70px); background-image: url('/stack-cube-img/fullstack.jpg'); }
-.face-right  { transform: rotateY( 90deg) translateZ(70px); background-image: url('/stack-cube-img/mongodb.png'); }
-.face-left   { transform: rotateY(-90deg) translateZ(70px); background-image: url('/stack-cube-img/node.png'); }
-.face-top    { transform: rotateX( 90deg) translateZ(70px); background-image: url('/stack-cube-img/express.png'); }
-.face-bottom { transform: rotateX(-90deg) translateZ(70px); background-image: url('/stack-cube-img/github.png'); }
+.face-front  { 
+  transform: rotateY(0deg) translateZ(80px); 
+  background-image: url('/stack-cube-img/react.png');
+}
+.face-back   { 
+  transform: rotateY(180deg) translateZ(80px); 
+  background-image: url('/stack-cube-img/fullstack.jpg');
+}
+.face-right  { 
+  transform: rotateY(90deg) translateZ(80px); 
+  background-image: url('/stack-cube-img/mongodb.png');
+}
+.face-left   { 
+  transform: rotateY(-90deg) translateZ(80px); 
+  background-image: url('/stack-cube-img/node.png');
+}
+.face-top    { 
+  transform: rotateX(90deg) translateZ(80px); 
+  background-image: url('/stack-cube-img/express.png');
+}
+.face-bottom { 
+  transform: rotateX(-90deg) translateZ(80px); 
+  background-image: url('/stack-cube-img/github.png');
+}
