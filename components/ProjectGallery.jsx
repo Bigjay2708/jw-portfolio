@@ -3,33 +3,37 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Sample project data
 const projects = [
- {
+  {
     id: 1,
     title: 'Portfolio Website',
-    description: 'A personal portfolio built with Next.js and Tailwind CSS.',
-    image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
-    tags: ['React', 'Next.js', 'Tailwind'],
+    description: 'A modern, responsive portfolio website leveraging Next.js 15 that combines interactive elements, smooth animations, and professional content presentation.',
+    image: '/github-pages.png',
+    tags: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion'],
+    repo: 'https://github.com/Bigjay2708/jw-portfolio',
+    live: 'https://jw-portfolio.vercel.app'
   },
   {
     id: 2,
-    title: 'E-commerce Store',
-    description: 'Full-stack e-commerce application using MERN stack.',
-    image: '/e-commerce.webp',
-    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
+    title: 'The Review Room',
+    description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
+    image: '/blog-project.webp',
+    tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
+    repo: 'https://github.com/Bigjay2708/The-Review-Room'
   },
   {
     id: 3,
-    title: 'Blog Platform',
-    description: 'A headless CMS blog using Strapi and Gatsby.',
-    image: '/blog-project.webp',
-    tags: ['Gatsby', 'GraphQL', 'Strapi'],
+    title: 'NeighborHub',
+    description: 'A comprehensive neighborhood community platform built with the MERN stack enabling residents to connect through real-time chat, bulletin boards, events, and marketplace.',
+    image: '/chat-app.jpg',
+    tags: ['Next.js', 'React', 'Material-UI', 'Socket.io', 'MongoDB', 'JWT'],
+    repo: 'https://github.com/Bigjay2708/neighbor-hub'
   },
   {
     id: 4,
-    title: 'Chat App',
-    description: 'Real-time chat application using Socket.io.',
-    image: '/chat-app.jpg',
-    tags: ['Socket.io', 'Express', 'React'],
+    title: 'E-commerce Store',
+    description: 'Full-stack e-commerce application using MERN stack with modern UI and secure payment processing.',
+    image: '/e-commerce.webp',
+    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
   },
 ];
 
@@ -85,11 +89,10 @@ export default function ProjectGallery() {
                 src={project.image}
                 alt={project.title}
                 className="w-full h-40 object-cover"
-              />
-              <div className="p-4">
+              />              <div className="p-4">
                 <h3 className="text-xl text-gray-100 mb-2">{project.title}</h3>
                 <p className="text-gray-400 text-sm mb-4">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
@@ -98,6 +101,29 @@ export default function ProjectGallery() {
                       {tag}
                     </span>
                   ))}
+                </div>
+                {/* Project Links */}
+                <div className="flex gap-2">
+                  {project.repo && (
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700 transition-colors"
+                    >
+                      GitHub
+                    </a>
+                  )}
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition-colors"
+                    >
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

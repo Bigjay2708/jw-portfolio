@@ -109,11 +109,9 @@ export default function ContactPage() {
                   style={{ display: 'block' }}
                 />
               </a>
-            ))}
-
-            {/* Resume Download Button */}
+            ))}            {/* Resume Download Button */}
             <Link
-              href="/resume.pdf"
+              href="/JW-Resume.pdf"
               className="bg-[#013220] p-3 rounded-lg hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center gap-2"
               download
               style={{

@@ -1,20 +1,23 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 
 export default function CircuitBoardBackground() {
   const canvasRef = useRef(null);
+  const animationRef = useRef(null);
+  const isInitialized = useRef(false);
 
-  useEffect(() => {
+  const initializeCanvas = useCallback(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas || isInitialized.current) return;
+    
     const ctx = canvas.getContext('2d');
-
     let width = window.innerWidth;
     let height = window.innerHeight;
     const spacing = 60;
     const gridColor = 'rgba(0, 150, 0, 0.3)';
     const lightBaseColor = '0,255,180';    
+    
     canvas.width = width;
     canvas.height = height;
 
@@ -36,7 +39,6 @@ export default function CircuitBoardBackground() {
     });
 
     let lastTime = 0;
-    let rafId;
 
     function drawGrid() {
       ctx.beginPath();
@@ -48,7 +50,7 @@ export default function CircuitBoardBackground() {
         ctx.moveTo(0, y);
         ctx.lineTo(width, y);
       }
-      ctx.strokeStyle = gridColor;
+            ctx.strokeStyle = gridColor;
       ctx.lineWidth = 1;
       ctx.stroke();
     }
@@ -82,10 +84,8 @@ export default function CircuitBoardBackground() {
         ctx.shadowBlur = 0;  // reset for next shapes
       });
 
-      rafId = requestAnimationFrame(animate);
+      animationRef.current = requestAnimationFrame(animate);
     }
-
-    rafId = requestAnimationFrame(animate);
 
     function onResize() {
       width = window.innerWidth;
@@ -103,13 +103,23 @@ export default function CircuitBoardBackground() {
         }
       });
     }
+
     window.addEventListener('resize', onResize);
+    animationRef.current = requestAnimationFrame(animate);
+    isInitialized.current = true;
 
     return () => {
-      cancelAnimationFrame(rafId);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
       window.removeEventListener('resize', onResize);
+      isInitialized.current = false;
     };
   }, []);
+
+  useEffect(() => {
+    initializeCanvas();
+  }, [initializeCanvas]);
 
   return (
     <canvas

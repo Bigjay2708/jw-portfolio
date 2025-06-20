@@ -9,34 +9,34 @@ const projects = [
   {
     id: 1,
     title: 'Portfolio Website',
-    description: 'A personal portfolio built with Next.js and Tailwind CSS.',
-    image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&h=400&w=600',
-    tags: ['React', 'Next.js', 'Tailwind'],
-    link: '/projects/1'
+    description: 'A modern, responsive portfolio website leveraging Next.js 15 that combines interactive elements, smooth animations, and professional content presentation.',
+    image: '/github-pages.png',
+    tags: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion'],
+    link: 'https://github.com/Bigjay2708/jw-portfolio'
   },
   {
     id: 2,
-    title: 'E-commerce Store',
-    description: 'Full-stack e-commerce application using MERN stack.',
-    image: '/e-commerce.webp',
-    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
-    link: '/projects/2'
+    title: 'The Review Room',
+    description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
+    image: '/blog-project.webp',
+    tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
+    link: 'https://github.com/Bigjay2708/The-Review-Room'
   },
   {
     id: 3,
-    title: 'Blog Platform',
-    description: 'A headless CMS blog using Strapi and Gatsby.',
-    image: '/blog-project.webp',
-    tags: ['Gatsby', 'GraphQL', 'Strapi'],
-    link: '/projects/3'
+    title: 'NeighborHub',
+    description: 'A comprehensive neighborhood community platform built with the MERN stack enabling residents to connect through real-time chat, bulletin boards, events, and marketplace.',
+    image: '/chat-app.jpg',
+    tags: ['Next.js', 'React', 'Socket.io', 'MongoDB', 'JWT'],
+    link: 'https://github.com/Bigjay2708/neighbor-hub'
   },
   {
     id: 4,
-    title: 'Chat App',
-    description: 'Real-time chat application using Socket.io.',
-    image: '/chat-app.jpg',
-    tags: ['Socket.io', 'Express', 'React'],
-    link: '/projects/4'
+    title: 'E-commerce Store',
+    description: 'Full-stack e-commerce application using MERN stack with modern UI and secure payment processing.',
+    image: '/e-commerce.webp',
+    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
+    link: '#'
   }
 ]
 
@@ -75,8 +75,7 @@ export default function ProjectCarousel() {
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
             className="absolute inset-0"
-          >
-            <Link href={projects[currentIndex].link} className="block h-full">
+          >            <Link href={projects[currentIndex].link} className="block h-full" target={projects[currentIndex].link.startsWith('http') ? "_blank" : "_self"}>
               <div className="relative h-full">
                 <Image
                   src={projects[currentIndex].image}

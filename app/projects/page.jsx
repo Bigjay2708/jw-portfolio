@@ -11,13 +11,13 @@ import ProjectGallery from '../../components/ProjectGallery'  // ← adjust this
 
 // Featured project data
 const featured = {
-  title: 'GitHub Portfolio Website',
+  title: 'Portfolio Website',
   description:
-    'A responsive portfolio site showcasing full stack development projects, tech stack, and design capabilities. Built with HTML, CSS, and JavaScript, hosted on GitHub Pages.',
-  tech: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages'],
+    'A modern, responsive portfolio website leveraging Next.js 15 that combines interactive elements, smooth animations, and professional content presentation. The application demonstrates full-stack development capabilities through various interactive components and modern web development practices.',
+  tech: ['Next.js v15.3.2', 'React v19.0.0', 'TailwindCSS v4', 'Framer Motion', 'React Icons'],
   image: '/github-pages.png',
-  repo: 'https://github.com/Bigjay2708/Bigjay2708.github.io',
-  live: 'https://bigjay2708.github.io',
+  repo: 'https://github.com/Bigjay2708/jw-portfolio',
+  live: 'https://jw-portfolio.vercel.app',
 }
 
 export default function ProjectsPage() {

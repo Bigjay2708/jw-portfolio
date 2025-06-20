@@ -31,9 +31,8 @@ const Footer = () => {
             className="flex items-center gap-1 hover:text-green-300 transition-colors"
           >
             <FaGithub size={12} /> GitHub
-          </Link>
-          <Link 
-            href="/resume.pdf" 
+          </Link>          <Link 
+            href="/JW-Resume.pdf" 
             download
             className="flex items-center gap-1 hover:text-green-300 transition-colors"
           >
