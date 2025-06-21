@@ -2,16 +2,12 @@
 
 import { useState, useEffect } from 'react'
 
-/**
- * Custom hook for managing loading state and progress
- * 
- * @returns {Object} Object containing loading state and progress
- */
+
 export default function useLoading() {
   const [isLoading, setIsLoading] = useState(true)
   const [loadingProgress, setLoadingProgress] = useState(0)
   
-  // Simulate loading state with progress
+
   useEffect(() => {
     let progress = 0
     const interval = setInterval(() => {

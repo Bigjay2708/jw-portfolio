@@ -16,12 +16,12 @@ export default function TypewriterEffect({
   const [textHighlight, setTextHighlight] = useState(false)
 
   useEffect(() => {
-    // Add a small delay before showing typewriter for a nice entrance effect
+
     const timer = setTimeout(() => setIsVisible(true), 500)
     return () => clearTimeout(timer)
   }, [])
 
-  // Add a pulse effect to the text when it changes
+
   useEffect(() => {
     const highlightInterval = setInterval(() => {
       setTextHighlight(true)

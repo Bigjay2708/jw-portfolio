@@ -55,7 +55,7 @@ const projects = [
   }
 ];
 
-// Extract unique tags
+
 const allTags = Array.from(
   new Set(projects.flatMap((p) => p.tags))
 ).sort();
@@ -68,13 +68,13 @@ export default function ProjectGallery() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortOption, setSortOption] = useState('default');
 
-  // Filter projects based on tags and search query
+
   const filtered = projects
     .filter(project => {
-      // Tag filtering
+
       const matchesTag = selectedTag === 'All' || project.tags.includes(selectedTag);
       
-      // Search filtering (case insensitive)
+
       const matchesSearch = searchQuery === '' || 
         project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -83,7 +83,7 @@ export default function ProjectGallery() {
       return matchesTag && matchesSearch;
     })
     .sort((a, b) => {
-      // Sorting logic
+
       switch(sortOption) {
         case 'nameAsc':
           return a.title.localeCompare(b.title);
@@ -92,7 +92,7 @@ export default function ProjectGallery() {
         case 'featured':
           return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
         default:
-          return 0; // Default order (as defined in the array)
+          return 0;
       }
     });
 

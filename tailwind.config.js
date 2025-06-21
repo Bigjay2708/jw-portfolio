@@ -28,17 +28,17 @@ module.exports = {
           '0%': {
             'background-size': '200% 200%',
             'background-position': 'left center',
-            'background-color': 'rgba(45, 212, 191, 0.1)' // teal-400 with low opacity
+            'background-color': 'rgba(45, 212, 191, 0.1)'
           },
           '50%': {
             'background-size': '200% 200%',
             'background-position': 'right center',
-            'background-color': 'rgba(0, 100, 0, 0.1)' // darkgreen with low opacity
+            'background-color': 'rgba(0, 100, 0, 0.1)'
           },
           '100%': {
             'background-size': '200% 200%',
             'background-position': 'left center',
-            'background-color': 'rgba(45, 212, 191, 0.1)' // back to teal-400
+            'background-color': 'rgba(45, 212, 191, 0.1)'
           }
         },
         'float': {

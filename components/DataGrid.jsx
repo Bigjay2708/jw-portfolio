@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Tooltip } from 'react-tooltip'
 
-// Initial static metrics (fallback)
+
 const initialMetrics = [
   { label: 'Years of Experience', value: 3, isGithubSync: false, description: 'Years actively developing web applications and software solutions' },
   { label: 'Projects Built', value: 8, isGithubSync: true, description: 'Total number of non-forked repositories on GitHub' },
@@ -12,7 +12,7 @@ const initialMetrics = [
   { label: 'Stars Received', value: 15, isGithubSync: true, description: 'Total stars received across all GitHub repositories' },
 ]
 
-// Cache duration in milliseconds (24 hours)
+
 const CACHE_DURATION = 24 * 60 * 60 * 1000
 
 export default function DataGrid() {
@@ -23,7 +23,7 @@ export default function DataGrid() {
   const [lastUpdated, setLastUpdated] = useState(null)
   const [isRefreshing, setIsRefreshing] = useState(false)
 
-  // Check if GitHub user exists and get basic profile
+
   const checkGitHubUser = async (username) => {
     try {
       const response = await fetch(`https://api.github.com/users/${username}`, {
@@ -43,7 +43,7 @@ export default function DataGrid() {
     }
   }
 
-  // Function to fetch GitHub data
+
   const fetchGithubData = async (forceRefresh = false) => {
     try {
       setIsRefreshing(forceRefresh)
@@ -51,38 +51,36 @@ export default function DataGrid() {
         setIsLoading(true)
       }
       
-      // Check cache if not forcing refresh
+
       if (!forceRefresh) {
         const cachedData = localStorage.getItem('githubMetrics')
         if (cachedData) {
           const { data, timestamp } = JSON.parse(cachedData)
-          // If cache is still valid (less than 24 hours old)
+
           if (Date.now() - timestamp < CACHE_DURATION) {
             setMetrics([
-              initialMetrics[0], // Keep years of experience static
-              ...data.slice(1) // Use cached GitHub data
+
+              ...data.slice(1)
             ])
             setLastUpdated(new Date(timestamp))
             setIsLoading(false)
             return
           }
         }
-      }      // GitHub username - replace with your own
-      const username = 'Bigjay2708' // This account has 16 public repos according to GitHub API
+      }
+      const username = 'Bigjay2708'
       
-      // Check if GitHub user exists
+
       const user = await checkGitHubUser(username)
       if (!user) {
         throw new Error('GitHub user not found')
       }
       
-      // Fetch repositories data with proper error handling
+
       const reposResponse = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
         headers: {
           'Accept': 'application/vnd.github.v3+json'
-        },
-        // Add cache control to avoid stale data
-        cache: forceRefresh ? 'no-cache' : 'default'
+        },        cache: forceRefresh ? 'no-cache' : 'default'
       })
       
       if (!reposResponse.ok) {
@@ -90,25 +88,19 @@ export default function DataGrid() {
       }
       
       const repos = await reposResponse.json()
-      
-      // Calculate projects count (non-forked repositories)
-      const projectsCount = repos.filter(repo => !repo.fork).length
-        // Calculate technologies used (unique languages)
+          const projectsCount = repos.filter(repo => !repo.fork).length
       const languages = new Set()
       
-      // We need to fetch languages for each repo
+
       const nonForkedRepos = repos.filter(repo => !repo.fork)
       
-      // First add the primary language for each repo
+
       for (const repo of nonForkedRepos) {
         if (repo.language) {
           languages.add(repo.language)
         }
       }
-      
-      // For more accurate language count, fetch detailed language data for a subset of repos
-      // to avoid API rate limits
-      const reposForLanguages = nonForkedRepos.slice(0, 10) // Check up to 10 repos for languages
+        const reposForLanguages = nonForkedRepos.slice(0, 10)
       
       for (const repo of reposForLanguages) {
         try {
@@ -126,13 +118,13 @@ export default function DataGrid() {
           console.error(`Error fetching languages for ${repo.name}:`, err)
         }
       }
-        // Calculate total commits (estimated from repository stats)
+
       let totalCommits = 0
       
-      // Get first 5 repos to avoid too many API requests
+
       const reposToCheck = nonForkedRepos.slice(0, 5)
       
-      // Attempt to get commit counts from the GitHub API
+
       for (const repo of reposToCheck) {
         try {
           const statsResponse = await fetch(`https://api.github.com/repos/${username}/${repo.name}/stats/contributors`, {
@@ -143,7 +135,7 @@ export default function DataGrid() {
           
           if (statsResponse.ok) {
             const stats = await statsResponse.json()
-            // Sometimes the stats might be empty as GitHub generates them asynchronously
+
             if (stats.length > 0) {
               const userStats = stats.find(stat => stat.author?.login === username)
               if (userStats) {
