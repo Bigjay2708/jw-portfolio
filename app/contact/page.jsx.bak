@@ -37,8 +37,7 @@ export default function ContactPage() {    const [submitted, setSubmitted] = use
     })
   }
 
-  // Handle input changes and validate
-  const handleInputChange = (e) => {
+  // Handle input changes and validate  const handleInputChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     

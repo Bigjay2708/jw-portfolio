@@ -6,11 +6,16 @@ import Image from 'next/image'
 import StackCube from '@/components/StackCube'
 import TypewriterEffect from '@/components/TypewriterEffect'
 import ProjectCarousel from '@/components/ProjectCarousel'
+import LoadingScreen from '@/components/LoadingScreen'
+import useLoading from '@/hooks/useLoading'
 
 
 export default function HomePage() {
+  const { isLoading, loadingProgress } = useLoading()
+
   return (
     <main>
+      <LoadingScreen isLoading={isLoading} loadingProgress={loadingProgress} loadingText="Loading Homepage" />
       <section className="text-gray-200 px-4">
         {/* Hero Section */}
         <div className="min-h-screen flex flex-col items-center justify-center relative">
@@ -70,7 +75,7 @@ export default function HomePage() {
               
               <div className="flex mt-12 gap-4">
                 <motion.a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/Bigjay2708" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   whileHover={{ y: -5 }}
@@ -81,7 +86,7 @@ export default function HomePage() {
                   </svg>
                 </motion.a>
                 <motion.a 
-                  href="https://linkedin.com/in/yourusername" 
+                  href="https://www.linkedin.com/in/jasonwells83" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   whileHover={{ y: -5 }}

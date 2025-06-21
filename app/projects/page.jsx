@@ -7,6 +7,8 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import LoadingScreen from '@/components/LoadingScreen'
+import useLoading from '@/hooks/useLoading'
 
 import ProjectGallery from '../../components/ProjectGallery'  // ← adjust this path if needed
 
@@ -35,28 +37,13 @@ const featuredProjects = [
 export default function ProjectsPage() {
   const [expandedId, setExpandedId] = useState(null);
   const [selectedProject, setSelectedProject] = useState(featuredProjects[1]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  // Simulate loading state for demo purposes
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-    
-    return () => clearTimeout(timer);
-  }, []);
+  // Use the same loading hook used in about page for consistency
+  const { isLoading, loadingProgress } = useLoading();
 
   return (
     <>
-      {/* Loading overlay */}
-      {isLoading && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
-          <div className="flex flex-col items-center">
-            <div className="w-16 h-16 border-t-4 border-darkgreen rounded-full animate-spin mb-4"></div>
-            <p className="text-darkgreen text-lg font-semibold">Loading projects...</p>
-          </div>
-        </div>
-      )}
+      {/* Loading screen component */}
+      <LoadingScreen isLoading={isLoading} loadingProgress={loadingProgress} loadingText="Loading Projects" />
 
       <motion.section 
         initial={{ opacity: 0 }}
@@ -79,22 +66,7 @@ export default function ProjectsPage() {
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Explore my latest work, from responsive web applications to full-stack solutions.
             Each project represents my commitment to clean code, modern design, and effective problem-solving.
-          </p>
-        </motion.div>
-
-        {/* Learning Highlight */}
-        <motion.div 
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="fixed top-20 right-6 z-20"
-        >
-          <div className="bg-[#111] text-darkgreen border border-darkgreen px-4 py-2 rounded-md shadow-lg text-sm font-mono animate-pulse backdrop-blur-sm">
-            <span className="block">📚 Actively learning </span>
-            <span className="block"> this new technology </span>
-            <span className="font-bold text-green-400">Python 🐍</span>
-          </div>
-        </motion.div>
+          </p>        </motion.div>
 
         {/* Featured Projects Section */}
         <motion.div
@@ -157,25 +129,15 @@ export default function ProjectsPage() {
                       {tech}
                     </span>
                   ))}
-                </div>
-                <div className="flex gap-4">
+                </div>                <div className="flex gap-4">
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     href={selectedProject.repo}
                     target="_blank"
-                    className="px-4 py-2 border border-darkgreen text-darkgreen rounded-md hover:bg-darkgreen hover:text-white transition-all duration-300"
-                  >
-                    View Code
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    href={selectedProject.live}
-                    target="_blank"
                     className="px-4 py-2 bg-darkgreen text-white rounded-md hover:bg-opacity-90 transition-all duration-300"
                   >
-                    Live Demo
+                    View Code
                   </motion.a>
                 </div>
               </div>

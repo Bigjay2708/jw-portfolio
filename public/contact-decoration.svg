@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Grid Pattern -->
+  <defs>
+    <pattern id="grid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#013220" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#grid)" />
+  
+  <!-- Email Icon -->
+  <g transform="translate(60, 70) scale(0.8)">
+    <rect x="10" y="20" width="80" height="60" rx="5" stroke="#013220" stroke-width="2.5" fill="none"/>
+    <path d="M 10 30 L 50 60 L 90 30" stroke="#013220" stroke-width="2.5" fill="none"/>
+  </g>
+  
+  <!-- Decorative dots -->
+  <circle cx="30" cy="30" r="3" fill="#013220" fill-opacity="0.6"/>
+  <circle cx="170" cy="30" r="3" fill="#013220" fill-opacity="0.6"/>
+  <circle cx="30" cy="170" r="3" fill="#013220" fill-opacity="0.6"/>
+  <circle cx="170" cy="170" r="3" fill="#013220" fill-opacity="0.6"/>
+  
+  <!-- Curved lines -->
+  <path d="M 30 100 Q 60 130, 100 100 T 170 100" stroke="#013220" stroke-width="1.5" fill="none" stroke-opacity="0.5"/>
+  <path d="M 30 110 Q 60 140, 100 110 T 170 110" stroke="#013220" stroke-width="1.5" fill="none" stroke-opacity="0.5"/>
+</svg>
