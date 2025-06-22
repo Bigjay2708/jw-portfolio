@@ -167,30 +167,31 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Tech Stack Section with StackCube */}
+        {/* Skills & Tech Stack Section */}
         <div className="py-20 bg-gray-900/30 border-t border-gray-800">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-6xl mx-auto"
+            className="max-w-7xl mx-auto"
           >
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                My Tech Stack
+                Skills & Tech Stack
               </h2>
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                I leverage cutting-edge technologies to build robust, scalable, and responsive applications that deliver exceptional user experiences.
+              <p className="text-gray-300 max-w-3xl mx-auto">
+                I leverage cutting-edge technologies and methodologies to build robust, scalable, and responsive applications that deliver exceptional user experiences.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="flex justify-center order-2 md:order-1">
+            {/* Main Tech Stack Grid */}
+            <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+              <div className="flex justify-center order-2 lg:order-1">
                 <StackCube />
               </div>
-              <div className="order-1 md:order-2">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+              <div className="order-1 lg:order-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 hover:border-darkgreen transition-all duration-300 hover:shadow-md">
                     <h3 className="text-white font-semibold mb-3 flex items-center">
                       <svg className="w-5 h-5 mr-2 text-darkgreen" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -278,7 +279,7 @@ export default function HomePage() {
                       <svg className="w-5 h-5 mr-2 text-darkgreen" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
                       </svg>
-                      Other Skills
+                      Specializations
                     </h3>
                     <div className="text-gray-300 space-y-2">
                       <div className="flex items-center">
@@ -300,16 +301,83 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-                
-                <div className="flex justify-center md:justify-end">
-                  <Link
-                    href="/about"
-                    className="inline-block px-6 py-3 border-2 border-darkgreen text-darkgreen rounded-lg hover:bg-darkgreen hover:text-white transition-all duration-300"
-                  >
-                    Learn More About My Skills
-                  </Link>
-                </div>
               </div>
+            </div>
+            
+            {/* Expertise Areas */}
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Frontend Development */}
+              <motion.div 
+                whileHover={{ y: -10 }}
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-darkgreen transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-darkgreen/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-darkgreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Frontend Development</h3>
+                <p className="text-gray-300 mb-4">Creating responsive, intuitive user interfaces with modern frameworks and libraries.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">React</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Next.js</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Tailwind CSS</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">JavaScript</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">HTML/CSS</span>
+                </div>
+              </motion.div>
+              
+              {/* Backend Development */}
+              <motion.div 
+                whileHover={{ y: -10 }}
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-darkgreen transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-darkgreen/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-darkgreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Backend Development</h3>
+                <p className="text-gray-300 mb-4">Building robust server-side applications with scalable architecture.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Node.js</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Express</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">MongoDB</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">RESTful APIs</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Authentication</span>
+                </div>
+              </motion.div>
+              
+              {/* Tools & Methodologies */}
+              <motion.div 
+                whileHover={{ y: -10 }}
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-darkgreen transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-darkgreen/20 rounded-lg flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-darkgreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Tools & Methodologies</h3>
+                <p className="text-gray-300 mb-4">Leveraging modern tools and practices for efficient development workflows.</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Git/GitHub</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">VS Code</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Responsive Design</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Agile/Scrum</span>
+                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Vercel</span>
+                </div>
+              </motion.div>
+            </div>
+            
+            <div className="flex justify-center mt-12">
+              <Link
+                href="/about"
+                className="inline-block px-8 py-3 border-2 border-darkgreen text-darkgreen rounded-lg hover:bg-darkgreen hover:text-white transition-all duration-300 transform hover:scale-105"
+              >
+                Learn More About My Skills
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -379,91 +447,6 @@ export default function HomePage() {
           </motion.div>
         </div>
 
-        {/* Skills & Expertise Section */}
-        <div className="py-20 bg-gray-900/30 border-t border-gray-800">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-6xl mx-auto"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Skills & Expertise
-              </h2>
-              <p className="text-gray-400 max-w-2xl mx-auto">
-                A comprehensive look at my technical abilities and specialized knowledge areas.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Frontend Development */}
-              <motion.div 
-                whileHover={{ y: -10 }}
-                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-darkgreen transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-darkgreen/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-darkgreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Frontend Development</h3>
-                <p className="text-gray-300 mb-4">Creating responsive, intuitive user interfaces with modern frameworks and libraries.</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">React</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Next.js</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Tailwind CSS</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">JavaScript</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">HTML/CSS</span>
-                </div>
-              </motion.div>
-              
-              {/* Backend Development */}
-              <motion.div 
-                whileHover={{ y: -10 }}
-                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-darkgreen transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-darkgreen/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-darkgreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Backend Development</h3>
-                <p className="text-gray-300 mb-4">Building robust server-side applications with scalable architecture.</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Node.js</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Express</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">MongoDB</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">RESTful APIs</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Authentication</span>
-                </div>
-              </motion.div>
-              
-              {/* Tools & Methodologies */}
-              <motion.div 
-                whileHover={{ y: -10 }}
-                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-darkgreen transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-darkgreen/20 rounded-lg flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-darkgreen" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">Tools & Methodologies</h3>
-                <p className="text-gray-300 mb-4">Leveraging modern tools and practices for efficient development workflows.</p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Git/GitHub</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">VS Code</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Responsive Design</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Agile/Scrum</span>
-                  <span className="px-3 py-1 bg-gray-700 rounded-full text-sm text-gray-300">Vercel</span>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
 
         {/* Call to Action */}
         <div className="py-20 bg-gradient-to-b from-gray-900/50 to-gray-900/80 border-t border-gray-800 relative overflow-hidden">
