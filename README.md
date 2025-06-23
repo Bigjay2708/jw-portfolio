@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jason Wells Portfolio
+
+A modern, interactive portfolio website showcasing my skills, projects, and professional experience as a Full Stack Developer.
+
+![Portfolio Website Screenshot](/PortfolioProject.png)
+
+## Features
+
+- **Interactive UI**: Engaging user experience with smooth animations powered by Framer Motion
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Dynamic Components**:
+  - Interactive Stack Cube displaying tech skills
+  - Typewriter effect for dynamic text presentation
+  - Project showcase with detailed descriptions
+  - Quote carousel featuring inspirational quotes
+- **Modern Tech Stack**: Built with Next.js 13, React 18, and Tailwind CSS 4
+- **Performance Optimized**: Fast loading times and optimized asset delivery
+- **Contact Form**: Direct communication channel with EmailJS integration
+
+## Pages
+
+- **Home**: Introduction with animated components and quick links
+- **About**: Detailed professional background, skills, and personal interests
+- **Projects**: Showcase of development work with descriptions and live demos
+- **Resume**: Professional experience and downloadable resume
+- **Contact**: Get in touch form with social media links
+
+## Tech Stack
+
+- **Frontend**: Next.js, React, Tailwind CSS, Framer Motion
+- **UI Components**: Custom React components with animations
+- **Styling**: Tailwind CSS with custom configurations
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+To run this portfolio locally:
 
 ```bash
+# Clone the repository
+git clone https://github.com/Bigjay2708/jw-portfolio.git
+
+# Navigate to the project directory
+cd jw-portfolio
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the portfolio.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This portfolio is deployed on [Vercel](https://vercel.com) at [jw-portfolio.vercel.app](https://jw-portfolio.vercel.app).
 
-## Learn More
+## Connect
 
-To learn more about Next.js, take a look at the following resources:
+- [GitHub](https://github.com/Bigjay2708)
+- [LinkedIn](https://www.linkedin.com/in/jasonwells83)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ using Next.js
