@@ -2,7 +2,7 @@
 
 A modern, interactive portfolio website showcasing my skills, projects, and professional experience as a Full Stack Developer.
 
-![Portfolio Website Screenshot](/PortfolioProject.png)
+![Portfolio Website Screenshot](public/PortfolioProject.png)
 
 ## Features
 
