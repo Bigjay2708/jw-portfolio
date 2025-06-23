@@ -12,7 +12,6 @@ A modern, interactive portfolio website showcasing my skills, projects, and prof
   - Interactive Stack Cube displaying tech skills
   - Typewriter effect for dynamic text presentation
   - Project showcase with detailed descriptions
-  - Quote carousel featuring inspirational quotes
 - **Modern Tech Stack**: Built with Next.js 13, React 18, and Tailwind CSS 4
 - **Performance Optimized**: Fast loading times and optimized asset delivery
 - **Contact Form**: Direct communication channel with EmailJS integration
@@ -54,7 +53,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the p
 
 ## Deployment
 
-This portfolio is deployed on [Vercel](https://vercel.com) at [jw-portfolio.vercel.app](https://jw-portfolio.vercel.app).
+This portfolio is deployed at [wells-jason.com](https://wells-jason.com).
 
 ## Connect
 
