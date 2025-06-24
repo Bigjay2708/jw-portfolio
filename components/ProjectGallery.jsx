@@ -8,42 +8,24 @@ const projects = [  {
     description: 'A modern, responsive portfolio website leveraging Next.js 15 that combines interactive elements, smooth animations, and professional content presentation.',
     longDescription: 'This portfolio showcases my web development skills with modern animations, responsive design, and optimized performance. Built with Next.js, React, and TailwindCSS, it features interactive UI components, dynamic content rendering, and seamless navigation.',
     image: '/PortfolioProject.png',
-    tags: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion'],
+    tags: ['Next.js v15.3.2', 'React v19.0.0', 'TailwindCSS v4', 'Framer Motion', 'React Icons'],
     repo: 'https://github.com/Bigjay2708/jw-portfolio',
     live: 'https://wells-jason.com',
     featured: true
   },
   {
     id: 2,
-    title: 'The Review Room',
-    description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
-    longDescription: 'The Review Room is a full-featured movie review platform that integrates with TMDb API for movie data. Users can create accounts, write and rate reviews, follow other reviewers, and build personalized watchlists. The application uses MongoDB for data storage, Express for API endpoints, React for the frontend, and Node.js for the backend.',
-    image: '/blog-project.webp',
-    tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
-    repo: 'https://github.com/Bigjay2708/The-Review-Room',
+    title: 'E-Commerce Store',
+    description: 'A full-featured e-commerce platform built with modern web technologies. Features include product browsing, cart management, user authentication, and secure checkout process.',
+    longDescription: 'This modern e-commerce platform provides a seamless shopping experience with responsive design. Features include product catalog browsing, shopping cart management, user authentication, and secure checkout process. Built with Next.js and React for the frontend, with state management for cart functionality and integrated payment processing.',
+    image: '/e-commerce-store.png',
+    tags: ['Next.js', 'React', 'TailwindCSS', 'State Management', 'Payment Integration'],
+    repo: 'https://github.com/Bigjay2708/e-commerce-store',
+    live: 'https://e-commerce-store-6xqqwdzz3-bigjays-projects.vercel.app',
     featured: true
   },
   {
     id: 3,
-    title: 'NeighborHub',
-    description: 'A comprehensive neighborhood community platform built with the MERN stack enabling residents to connect through real-time chat, bulletin boards, events, and marketplace.',
-    longDescription: 'NeighborHub connects local community members through a feature-rich platform. It includes real-time messaging with Socket.io, community event planning, local marketplace listings, and neighborhood bulletin boards. The application features user authentication, profile management, and geolocation services to connect neighbors within proximity.',
-    image: '/chat-app.jpg',
-    tags: ['Next.js', 'React', 'Material-UI', 'Socket.io', 'MongoDB', 'JWT'],
-    repo: 'https://github.com/Bigjay2708/neighbor-hub',
-    featured: true
-  },
-  {
-    id: 4,
-    title: 'E-commerce Store',
-    description: 'Full-stack e-commerce application using MERN stack with modern UI and secure payment processing.',
-    longDescription: 'This e-commerce platform provides a complete shopping experience with product browsing, cart management, secure checkout with Stripe integration, and user account management. The admin dashboard offers inventory management, sales analytics, and order processing functionality. Built with MongoDB for flexible product data storage, Express for RESTful APIs, React for dynamic UI, and Node.js for server-side operations.',
-    image: '/e-commerce.webp',
-    tags: ['MongoDB', 'Express', 'React', 'Node.js', 'Stripe', 'Redux'],
-    repo: 'https://github.com/Bigjay2708/e-commerce-platform',
-    featured: false
-  },  {
-    id: 5,
     title: 'Task Management App',
     description: 'A modern task management application that allows users to create, track, and organize tasks with priority levels and due dates.',
     longDescription: 'This streamlined task management application provides users with an intuitive interface to organize their work. Features include task creation with detailed descriptions, priority settings, status tracking (To Do, In Progress, Completed), due date management, and a clean, responsive UI. Built with React and Next.js for frontend, and uses modern state management techniques for a seamless user experience.',
@@ -51,6 +33,17 @@ const projects = [  {
     tags: ['React', 'Next.js', 'TailwindCSS', 'State Management', 'Responsive Design'],
     repo: 'https://github.com/Bigjay2708/task-management-app',
     live: 'https://task-management-app-omega-amber.vercel.app/',
+    featured: true
+  },
+  {
+    id: 4,
+    title: 'The Review Room',
+    description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
+    longDescription: 'The Review Room is a full-featured movie review platform that integrates with TMDb API for movie data. Users can create accounts, write and rate reviews, follow other reviewers, and build personalized watchlists. The application uses MongoDB for data storage, Express for API endpoints, React for the frontend, and Node.js for the backend.',
+    image: '/blog-project.webp',
+    tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
+    repo: 'https://github.com/Bigjay2708/The-Review-Room',
+    live: 'https://review-room-demo.vercel.app',
     featured: true
   }
 ];
