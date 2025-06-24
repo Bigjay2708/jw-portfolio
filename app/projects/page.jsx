@@ -1,6 +1,3 @@
-
-
-
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -22,6 +19,15 @@ const featuredProjects = [
     image: '/PortfolioProject.png',
     repo: 'https://github.com/Bigjay2708/jw-portfolio',
     live: 'https://wells-jason.com',
+  },
+  {
+    title: 'E-Commerce Store',
+    description: 
+      'A full-featured e-commerce platform built with modern web technologies. Features include product browsing, cart management, user authentication, and secure checkout process. The store provides a seamless shopping experience with a responsive design.',
+    tech: ['Next.js', 'React', 'TailwindCSS', 'State Management', 'Payment Integration'],
+    image: '/e-commerce-store.png',
+    repo: 'https://github.com/Bigjay2708/e-commerce-store',
+    live: 'https://e-commerce-store-6xqqwdzz3-bigjays-projects.vercel.app',
   },
   {
     title: 'Task Management App',

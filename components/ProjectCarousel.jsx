@@ -17,39 +17,30 @@ const projects = [
   },
   {
     id: 2,
-    title: 'The Review Room',
-    description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
-    image: '/blog-project.webp',
-    tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
-    repo: 'https://github.com/Bigjay2708/The-Review-Room',
-    live: 'https://review-room-demo.vercel.app'
+    title: 'E-Commerce Store',
+    description: 'A full-featured e-commerce platform with product browsing, cart management, user authentication, and secure checkout process.',
+    image: '/e-commerce-store.png',
+    tags: ['Next.js', 'React', 'TailwindCSS', 'State Management', 'Payment Integration'],
+    repo: 'https://github.com/Bigjay2708/e-commerce-store',
+    live: 'https://e-commerce-store-6xqqwdzz3-bigjays-projects.vercel.app'
   },
   {
     id: 3,
-    title: 'NeighborHub',
-    description: 'A comprehensive neighborhood community platform built with the MERN stack enabling residents to connect through real-time chat, bulletin boards, events, and marketplace.',
-    image: '/chat-app.jpg',
-    tags: ['Next.js', 'React', 'Socket.io', 'MongoDB', 'JWT'],
-    repo: 'https://github.com/Bigjay2708/neighbor-hub',
-    live: null
-  },
-  {
-    id: 4,
-    title: 'E-commerce Store',
-    description: 'Full-stack e-commerce application using MERN stack with modern UI and secure payment processing.',
-    image: '/e-commerce.webp',
-    tags: ['MongoDB', 'Express', 'React', 'Node.js'],
-    repo: 'https://github.com/Bigjay2708/e-commerce-platform',
-    live: null
-  },
-  {
-    id: 5,
     title: 'Task Management App',
     description: 'A modern task management application that allows users to create, track, and organize tasks with priority levels and due dates.',
     image: '/task-management-app.png',
     tags: ['React', 'Next.js', 'TailwindCSS', 'State Management', 'Responsive Design'],
     repo: 'https://github.com/Bigjay2708/task-management-app',
     live: 'https://task-management-app-omega-amber.vercel.app/'
+  },
+  {
+    id: 4,
+    title: 'The Review Room',
+    description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
+    image: '/blog-project.webp',
+    tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
+    repo: 'https://github.com/Bigjay2708/The-Review-Room',
+    live: 'https://review-room-demo.vercel.app'
   }
 ]
 
@@ -171,4 +162,4 @@ export default function ProjectCarousel() {
       </div>
     </div>
   )
-} 
+}
