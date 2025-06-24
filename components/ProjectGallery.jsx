@@ -21,7 +21,7 @@ const projects = [  {
     image: '/e-commerce-store.png',
     tags: ['Next.js', 'React', 'TailwindCSS', 'State Management', 'Payment Integration'],
     repo: 'https://github.com/Bigjay2708/e-commerce-store',
-    live: 'https://e-commerce-store-6xqqwdzz3-bigjays-projects.vercel.app',
+    live: 'https://e-commerce-store-five-phi.vercel.app',
     featured: true
   },
   {

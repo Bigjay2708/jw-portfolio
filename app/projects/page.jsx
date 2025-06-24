@@ -27,7 +27,7 @@ const featuredProjects = [
     tech: ['Next.js', 'React', 'TailwindCSS', 'State Management', 'Payment Integration'],
     image: '/e-commerce-store.png',
     repo: 'https://github.com/Bigjay2708/e-commerce-store',
-    live: 'https://e-commerce-store-6xqqwdzz3-bigjays-projects.vercel.app',
+    live: 'https://e-commerce-store-five-phi.vercel.app',
   },
   {
     title: 'Task Management App',
