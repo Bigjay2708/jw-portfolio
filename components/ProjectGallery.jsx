@@ -46,12 +46,13 @@ const projects = [
   },  {
     id: 5,
     title: 'Task Management App',
-    description: 'A productivity application for task management with drag-and-drop functionality, team collaboration, and progress tracking.',
-    longDescription: 'This Kanban-style task management application helps users organize work with customizable boards, lists, and cards. Features include drag-and-drop task organization, due date reminders, file attachments, team member assignments, and progress tracking. The app uses React for the frontend with React Beautiful DND for drag-and-drop functionality, and Firebase for backend services including real-time updates.',
-    image: '/tech-words.png',
-    tags: ['React', 'Firebase', 'React Beautiful DND', 'Authentication', 'Real-time Updates'],
-    repo: 'https://github.com/Bigjay2708/task-manager',
-    featured: false
+    description: 'A modern task management application that allows users to create, track, and organize tasks with priority levels and due dates.',
+    longDescription: 'This streamlined task management application provides users with an intuitive interface to organize their work. Features include task creation with detailed descriptions, priority settings, status tracking (To Do, In Progress, Completed), due date management, and a clean, responsive UI. Built with React and Next.js for frontend, and uses modern state management techniques for a seamless user experience.',
+    image: '/task-management-app.png',
+    tags: ['React', 'Next.js', 'TailwindCSS', 'State Management', 'Responsive Design'],
+    repo: 'https://github.com/Bigjay2708/task-management-app',
+    live: 'https://task-management-app-omega-amber.vercel.app/',
+    featured: true
   }
 ];
 

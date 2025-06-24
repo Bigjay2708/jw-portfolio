@@ -21,7 +21,16 @@ const featuredProjects = [
     tech: ['Next.js v15.3.2', 'React v19.0.0', 'TailwindCSS v4', 'Framer Motion', 'React Icons'],
     image: '/PortfolioProject.png',
     repo: 'https://github.com/Bigjay2708/jw-portfolio',
-    live: 'https://jw-portfolio.vercel.app',
+    live: 'https://wells-jason.com',
+  },
+  {
+    title: 'Task Management App',
+    description: 
+      'A modern task management application that allows users to create, track, and organize tasks with priority levels and due dates. Features a clean, intuitive UI for managing work effectively.',
+    tech: ['React', 'Next.js', 'TailwindCSS', 'State Management', 'Responsive Design'],
+    image: '/task-management-app.png',
+    repo: 'https://github.com/Bigjay2708/task-management-app',
+    live: 'https://task-management-app-omega-amber.vercel.app/',
   },
   {
     title: 'The Review Room',
@@ -36,7 +45,7 @@ const featuredProjects = [
 
 export default function ProjectsPage() {
   const [expandedId, setExpandedId] = useState(null);
-  const [selectedProject, setSelectedProject] = useState(featuredProjects[1]);
+  const [selectedProject, setSelectedProject] = useState(featuredProjects[1]); // Shows Task Management app by default
   // Use the same loading hook used in about page for consistency
   const { isLoading, loadingProgress } = useLoading();
 
