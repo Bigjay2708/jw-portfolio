@@ -6,12 +6,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const projects = [
-  {    id: 1,
+  {    
+    id: 1,
     title: 'Portfolio Website',
     description: 'A modern, responsive portfolio website leveraging Next.js 15 that combines interactive elements, smooth animations, and professional content presentation.',
     image: '/PortfolioProject.png',
     tags: ['Next.js', 'React', 'TailwindCSS', 'Framer Motion'],
-    link: 'https://github.com/Bigjay2708/jw-portfolio'
+    repo: 'https://github.com/Bigjay2708/jw-portfolio',
+    live: 'https://wells-jason.com'
   },
   {
     id: 2,
@@ -19,7 +21,8 @@ const projects = [
     description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
     image: '/blog-project.webp',
     tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
-    link: 'https://github.com/Bigjay2708/The-Review-Room'
+    repo: 'https://github.com/Bigjay2708/The-Review-Room',
+    live: 'https://review-room-demo.vercel.app'
   },
   {
     id: 3,
@@ -27,7 +30,8 @@ const projects = [
     description: 'A comprehensive neighborhood community platform built with the MERN stack enabling residents to connect through real-time chat, bulletin boards, events, and marketplace.',
     image: '/chat-app.jpg',
     tags: ['Next.js', 'React', 'Socket.io', 'MongoDB', 'JWT'],
-    link: 'https://github.com/Bigjay2708/neighbor-hub'
+    repo: 'https://github.com/Bigjay2708/neighbor-hub',
+    live: null
   },
   {
     id: 4,
@@ -35,7 +39,17 @@ const projects = [
     description: 'Full-stack e-commerce application using MERN stack with modern UI and secure payment processing.',
     image: '/e-commerce.webp',
     tags: ['MongoDB', 'Express', 'React', 'Node.js'],
-    link: '#'
+    repo: 'https://github.com/Bigjay2708/e-commerce-platform',
+    live: null
+  },
+  {
+    id: 5,
+    title: 'Task Management App',
+    description: 'A modern task management application that allows users to create, track, and organize tasks with priority levels and due dates.',
+    image: '/task-management-app.png',
+    tags: ['React', 'Next.js', 'TailwindCSS', 'State Management', 'Responsive Design'],
+    repo: 'https://github.com/Bigjay2708/task-management-app',
+    live: 'https://task-management-app-omega-amber.vercel.app/'
   }
 ]
 
@@ -66,15 +80,14 @@ export default function ProjectCarousel() {
   return (
     <div className="relative max-w-4xl mx-auto">
       <div className="relative h-[400px] overflow-hidden rounded-xl">
-        <AnimatePresence mode="wait">
-          <motion.div
+        <AnimatePresence mode="wait">          <motion.div
             key={currentIndex}
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
             className="absolute inset-0"
-          >            <Link href={projects[currentIndex].link} className="block h-full" target={projects[currentIndex].link.startsWith('http') ? "_blank" : "_self"}>
+          >
               <div className="relative h-full">
                 <Image
                   src={projects[currentIndex].image}
@@ -90,7 +103,7 @@ export default function ProjectCarousel() {
                     <p className="text-gray-200 mb-4">
                       {projects[currentIndex].description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-4">
                       {projects[currentIndex].tags.map((tag) => (
                         <span
                           key={tag}
@@ -100,10 +113,27 @@ export default function ProjectCarousel() {
                         </span>
                       ))}
                     </div>
+                    <div className="flex gap-4">
+                      <Link 
+                        href={projects[currentIndex].repo} 
+                        target="_blank"
+                        className="px-3 py-1.5 bg-darkgreen text-white text-sm rounded-md hover:bg-opacity-90 transition-all duration-300"
+                      >
+                        GitHub
+                      </Link>
+                      {projects[currentIndex].live && (
+                        <Link 
+                          href={projects[currentIndex].live} 
+                          target="_blank"
+                          className="px-3 py-1.5 border border-darkgreen text-darkgreen text-sm rounded-md hover:bg-darkgreen hover:text-white transition-all duration-300"
+                        >
+                          Live Demo
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </Link>
           </motion.div>
         </AnimatePresence>
       </div>

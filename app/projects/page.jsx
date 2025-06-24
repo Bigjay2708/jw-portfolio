@@ -137,8 +137,7 @@ export default function ProjectsPage() {
                     >
                       {tech}
                     </span>
-                  ))}
-                </div>                <div className="flex gap-4">
+                  ))}                </div>                <div className="flex gap-4">
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -148,6 +147,17 @@ export default function ProjectsPage() {
                   >
                     View Code
                   </motion.a>
+                  {selectedProject.live && (
+                    <motion.a
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      href={selectedProject.live}
+                      target="_blank"
+                      className="px-4 py-2 border border-darkgreen text-darkgreen rounded-md hover:bg-darkgreen hover:text-white transition-all duration-300"
+                    >
+                      Live Demo
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </div>
