@@ -214,7 +214,7 @@ export default function ContactPage() {    const [submitted, setSubmitted] = use
             >
               <div className="absolute inset-0 bg-darkgreen/20 rounded-lg blur-md group-hover:bg-darkgreen/30 transition-all duration-300"></div>
               <Link
-                href="/JW-Resume.pdf"
+                href="/jasonwellsresume.pdf"
                 download
                 className="relative flex items-center gap-2 bg-darkgreen text-white px-4 py-2 rounded-md text-sm font-medium hover:shadow-lg hover:shadow-green-500/30 transition-all duration-300 z-10"
               >

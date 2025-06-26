@@ -32,7 +32,7 @@ const Footer = () => {
           >
             <FaGithub size={12} /> GitHub
           </Link>          <Link 
-            href="/JW-Resume.pdf" 
+            href="/jasonwellsresume.pdf" 
             download
             className="flex items-center gap-1 hover:text-green-300 transition-colors"
           >

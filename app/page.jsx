@@ -369,7 +369,7 @@ export default function HomePage() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/JW-Resume.pdf"
+                  href="/jasonwellsresume.pdf"
                   target="_blank"
                   className="px-8 py-4 border-2 border-darkgreen text-darkgreen rounded-lg hover:bg-darkgreen hover:text-white transition-all duration-300 flex items-center gap-2"
                 >
