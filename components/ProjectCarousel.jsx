@@ -37,10 +37,10 @@ const projects = [
     id: 4,
     title: 'The Review Room',
     description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
-    image: '/blog-project.webp',
+    image: '/review-room.png',
     tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
-    repo: 'https://github.com/Bigjay2708/The-Review-Room',
-    live: 'https://review-room-demo.vercel.app'
+    repo: 'https://github.com/Bigjay2708/review-room',
+    live: 'https://review-room.vercel.app'
   }
 ]
 

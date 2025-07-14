@@ -43,9 +43,9 @@ const featuredProjects = [
     description: 
       'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration. Features include user authentication, personalized watchlists, and social sharing.',
     tech: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
-    image: '/blog-project.webp',
-    repo: 'https://github.com/Bigjay2708/The-Review-Room',
-    live: 'https://review-room-demo.vercel.app',
+    image: '/review-room.png',
+    repo: 'https://github.com/Bigjay2708/review-room',
+    live: 'https://review-room.vercel.app',
   }
 ];
 

@@ -40,10 +40,10 @@ const projects = [  {
     title: 'The Review Room',
     description: 'A modern movie review platform built with the MERN stack that allows users to browse movies, write reviews, and manage their profiles with TMDb API integration.',
     longDescription: 'The Review Room is a full-featured movie review platform that integrates with TMDb API for movie data. Users can create accounts, write and rate reviews, follow other reviewers, and build personalized watchlists. The application uses MongoDB for data storage, Express for API endpoints, React for the frontend, and Node.js for the backend.',
-    image: '/blog-project.webp',
+    image: '/review-room.png',
     tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
-    repo: 'https://github.com/Bigjay2708/The-Review-Room',
-    live: 'https://review-room-demo.vercel.app',
+    repo: 'https://github.com/Bigjay2708/review-room',
+    live: 'https://review-room.vercel.app',
     featured: true
   }
 ];
