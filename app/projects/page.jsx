@@ -46,6 +46,15 @@ const featuredProjects = [
     image: '/review-room.png',
     repo: 'https://github.com/Bigjay2708/review-room',
     live: 'https://review-room.vercel.app',
+  },
+  {
+    title: 'NeighborHub',
+    description: 
+      'A community-focused platform that simplifies local connections by fostering communication, collaboration, and shared safety. Features include community forums, local marketplace, safety networks, and neighbor directory to help build stronger communities.',
+    tech: ['Next.js', 'React', 'TailwindCSS', 'Community Features', 'Real-time Communication'],
+    image: '/neighbor-hub.png',
+    repo: 'https://github.com/Bigjay2708/the-neighbor-hub',
+    live: 'https://neighbor-hub.vercel.app',
   }
 ];
 

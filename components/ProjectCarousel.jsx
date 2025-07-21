@@ -41,6 +41,15 @@ const projects = [
     tags: ['React', 'TypeScript', 'Material-UI', 'Node.js', 'Express', 'MongoDB'],
     repo: 'https://github.com/Bigjay2708/review-room',
     live: 'https://review-room.vercel.app'
+  },
+  {
+    id: 5,
+    title: 'NeighborHub',
+    description: 'A community-focused platform that simplifies local connections by fostering communication, collaboration, and shared safety.',
+    image: '/neighbor-hub.png',
+    tags: ['Next.js', 'React', 'TailwindCSS', 'Community Features', 'Real-time Communication'],
+    repo: 'https://github.com/Bigjay2708/the-neighbor-hub',
+    live: 'https://neighbor-hub.vercel.app'
   }
 ]
 
