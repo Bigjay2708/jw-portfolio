@@ -51,7 +51,7 @@ const projects = [  {
     title: 'NeighborHub',
     description: 'A community-focused platform that simplifies local connections by fostering communication, collaboration, and shared safety.',
     longDescription: 'NeighborHub brings together all the tools your community needs to thrive, from daily conversations to emergency alerts. The platform features community forums for organized conversations, a local marketplace for safe trading, safety networks with real-time alerts, and a neighbor directory to discover people with shared interests. Built to foster stronger local communities through digital connection.',
-    image: '/neighbor-hub.png',
+    image: '/the-neighbor-hub.png',
     tags: ['Next.js', 'React', 'TailwindCSS', 'Community Features', 'Real-time Communication'],
     repo: 'https://github.com/Bigjay2708/the-neighbor-hub',
     live: 'https://neighbor-hub.vercel.app',

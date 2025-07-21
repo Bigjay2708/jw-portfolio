@@ -46,7 +46,7 @@ const projects = [
     id: 5,
     title: 'NeighborHub',
     description: 'A community-focused platform that simplifies local connections by fostering communication, collaboration, and shared safety.',
-    image: '/neighbor-hub.png',
+    image: '/the-neighbor-hub.png',
     tags: ['Next.js', 'React', 'TailwindCSS', 'Community Features', 'Real-time Communication'],
     repo: 'https://github.com/Bigjay2708/the-neighbor-hub',
     live: 'https://neighbor-hub.vercel.app'
